@@ -1,0 +1,19 @@
+$test-color-1: red;
+$test-color-2: #9982ff;
+$test-color-3: #fffc4a;
+
+$baseSize: 100;
+
+@function px2rem ($px) {
+  @return $px/$baseSize*1rem
+}
+@mixin fontSize($px){
+  font-size: px2rem($px);
+}
+@mixin marginTop($px){
+  margin-top: px2rem($px);
+}
+@mixin marginLeft($px){
+  margin-left: px2rem($px);
+}
+@import "../index";
